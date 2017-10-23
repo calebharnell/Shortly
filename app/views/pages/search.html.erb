@@ -1,11 +1,13 @@
-<h1>Pages#search</h1>
-<p>Find me in app/views/pages/search.html.erb</p>
+<div class="container">
 
+  <div class="search">
+    <%= form_for Link.new, url: '/' do |form| %>
 
-<%= form_for Link.new, url: '/' do |form| %>
+      <%= form.text_field :original_url %><br>
 
-  <%= form.text_field :original_url %><br>
+      <%= form.submit "Shorten" %>
 
-  <%= form.submit "Shorten" %>
+    <% end %>
+  </div>
 
-<% end %>
+</div>
